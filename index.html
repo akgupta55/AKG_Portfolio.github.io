@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -13,18 +14,19 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav>
-      <div class="container">
-        <h1>My Portfolio</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skill">Skill's</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header class="header">
+      <a href="#" class="logo">My Portfolio</a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skill's</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
     <!-- Home Section -->
     <section id="home" class="section">
@@ -33,6 +35,9 @@
           <h3>Hey! It's Me</h3>
           <h2>Ajay Kumar Gupta</h2>
           <p>And I'm a <samp class="text"></samp></p>
+          <div class="btn">
+            <a href="Ajay_Kumar_Gupta_Resume.pdf" download>Dowload CV</a>
+          </div>
           <div class="social">
             <a href="https://github.com/akgupta55" target="_blank"
               ><i class="bx bxl-github"></i
@@ -49,9 +54,6 @@
               <i class="bx bxl-gmail"></i
             ></a>
           </div>
-          <div class="btn">
-            <a href="Ajay_Kumar_Gupta_Resume.pdf" download>Dowload CV</a>
-          </div>
         </div>
 
         <img src="./pic.jpg" alt="it's a pic" />
@@ -64,12 +66,17 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="about-container">
-        <h2>
-          About <br />
-          Me
-        </h2>
+        <h2>About <span>Me</span></h2>
         <div class="box">
-          <p>Your introduction and background go here.</p>
+          <p>
+            I'm Ajay Kumar Gupta, currently pursuing a BTech in Computer Science
+            and Engineering, set to graduate in August 2024. I specialize in web
+            development using the MERN stack and have a strong foundation in
+            problem-solving with C++. I've completed multiple web development
+            projects, showcasing my ability to create dynamic and user-friendly
+            websites. I'm passionate about technology, continuously learning,
+            and eager to contribute my skills to the tech industry's growth.
+          </p>
         </div>
       </div>
     </section>
@@ -79,10 +86,59 @@
     <div class="rect"></div>
 
     <!-- skill Section -->
-    <section id="skill" class="section">
-      <div class="skill-container">
-        <h2>My Skill's</h2>
-        <p>Your introduction and background go here.</p>
+    <section id="skills" class="skills">
+      <h2 class="heading">My <span>Skill's</span></h2>
+
+      <div class="skills-row">
+        <div class="skills-column">
+          <h3 class="title">Coding Skills</h3>
+
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>HTML <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>CSS <span>80%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>JavaScript <span>65%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>C++ <span>70%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-column">
+          <h3 class="title">Professional Skills</h3>
+
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>HTML <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>CSS <span>80%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>JavaScript <span>65%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>C++ <span>70%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -112,7 +168,7 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="footer">
         <p>&copy; 2023 My Portfolio</p>
       </div>
     </footer>
