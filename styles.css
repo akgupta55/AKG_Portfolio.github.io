@@ -172,7 +172,7 @@ body {
   padding-left: 10%;
   font-size: 7rem;
 }
-.about-container h2 span {
+.about-container span {
   color: var(--main-color);
 }
 .box p {
@@ -180,6 +180,11 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: solid;
+  text-wrap: wrap;
+  text-align: inherit;
+  letter-spacing: 0.05rem;
 }
 
 /* skill-container */
@@ -193,8 +198,13 @@ body {
 .heading span {
   color: var(--main-color);
 }
+.skills {
+  min-height: auto;
+  padding-bottom: 7rem;
+  background: var(--second-bg-color);
+}
 
-.skills-content .skills-row {
+.skills .skills-row {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
@@ -215,23 +225,145 @@ body {
   padding: 0.5rem 1.5rem;
 }
 
-.skils-content .progress {
+.skills-content .progress {
   padding: 1rem 0;
 }
 
-.skils-content .progress h3 {
+.skills-content .progress h3 {
   font-size: 1.7rem;
   display: flex;
   justify-content: space-between;
 }
 
+.skills-content .progress h3 span {
+  color: var(--text-color);
+}
+
+.skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: var(--main-color);
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+  width: 90%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+  width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+  width: 65%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+  width: 70%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+  width: 90%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+  width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+  width: 65%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+  width: 70%;
+}
+
 /* Project styles */
 
 .projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  padding-bottom: 6rem;
+}
+
+.projects-container .projects-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
   display: flex;
+}
+
+.projects-box img {
+  height: 25rem;
   width: 100%;
-  height: 400px;
-  padding-top: 40px;
+  transition: 0.5s ease;
+}
+
+.projects-box:hover img {
+  transform: scale(1.1);
+}
+
+.projects-box .projects-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.projects-box:hover .projects-layer {
+  transform: translateY(0);
+}
+
+.projects-layer h4 {
+  color: var(--bg-color);
+  font-size: 3rem;
+}
+
+.projects-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.projects-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.projects-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+/* contact styles */
+
+.contact {
+  background: var(--second-bg-color);
 }
 
 .contact-container {
@@ -241,10 +373,49 @@ body {
   padding-top: 40px;
 }
 
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact form .btn {
+  background: var(--main-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 /* Footer styles */
 footer {
-  background-color: #333;
-  color: white;
+  font-size: 2rem;
+  background: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
   padding: 10px 0;
+}
+footer span {
+  color: var(--main-color);
 }
